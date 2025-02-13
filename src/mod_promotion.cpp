@@ -58,7 +58,7 @@ public:
             return true;
         }
 
-        if (player->getLevel() != 1)
+        if (player->GetLevel() != 1)
         {
             if (player && creature)
                 SendGossipMenuFor(player, 68, creature);
@@ -486,7 +486,7 @@ public:
         player->EquipNewItem(EQUIPMENT_SLOT_RANGED, (sConfigMgr->GetIntDefault("EQUIPMENT_SLOT_DRUID_CASTER_RANGED", 38360)), true);
     }
 
-    bool OnGossipSelect(Player* player, Creature* creature, uint32 /*sender*/, uint32 action)
+    bool OnGossipSelect(Player* player, Creature* creature, uint32 /*sender*/, uint32 action) override
     {
         uint32 accountID = player->GetSession()->GetAccountId();
         QueryResult result = CharacterDatabase.Query("SELECT COUNT(`guid`) FROM `characters` WHERE `account`={}", accountID);
