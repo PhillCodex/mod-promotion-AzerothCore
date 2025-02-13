@@ -512,6 +512,10 @@ public:
         player->learnSpell(SKILL_RIDING_100);
         player->learnSpell(SKILL_RIDING_FLYING);
         player->learnSpell(SKILL_RIDING_ARTISING);
+        
+        // 📚 Aprender TODAS las habilidades de la clase del jugador
+        player->learnDefaultSpells();
+        player->GetSession()->SendNotification("¡Has aprendido todas las habilidades de tu clase!");
 
         switch (player->getClass())
         {
