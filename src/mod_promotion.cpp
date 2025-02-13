@@ -516,9 +516,19 @@ public:
         // Otorgar 10,000 puntos de reputación con la facción 1156
         player->SetReputation(1156, 10000);
 
-        // Otorgar el logro 4598
-        player->CompletedAchievement(4598);
+        // Obtener el logro 4598 desde la base de datos de logros
+        const AchievementEntry* achievement = sAchievementStore.LookupEntry(4598);
+
+        if (achievement)
+        {
+        player->CompletedAchievement(achievement);
         player->GetSession()->SendNotification("¡Has ganado 10,000 de reputación y el logro especial!");
+        }
+        else
+        {
+        player->GetSession()->SendNotification("Error: No se pudo encontrar el logro.");
+        }
+
 
         switch (player->getClass())
         {
