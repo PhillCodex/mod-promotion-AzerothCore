@@ -61,9 +61,11 @@ public:
         if (player->GetLevel() != 1)
         {
             if (player && creature)
+            {
                 SendGossipMenuFor(player, 68, creature);
                 return true;
-        }
+            }
+        }        
 
         switch (player->getClass())
         {
@@ -113,7 +115,7 @@ public:
 
     void MoneyReward(Player* player)
     {
-        player->ModifyMoney(sConfigMgr->GetIntDefault("MoneyRewardValue", 25000000));
+        player->ModifyMoney(sConfigMgr->GetOption<int32>("MoneyRewardValue", 25000000));
     }
 
     void WarriorPromotionDps(Player* player)
