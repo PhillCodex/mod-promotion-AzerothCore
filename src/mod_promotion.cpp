@@ -526,7 +526,7 @@ public:
         }
         else
         {
-        player->GetSession()->SendNotification("Error: No se pudo encontrar el logro.");
+        player->GetSession()->SendSystemMessage("Error: No se pudo encontrar el logro.");
         }
 
 
