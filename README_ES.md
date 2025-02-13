@@ -15,12 +15,12 @@ Permite Al Owner, Editar Si Permite La Promocion, La Armadura Que Quiera Sin Nec
 
 Este módulo permite hacer esto y esto.
 Este Modulo Permite al jugador darle una promocion que consta de lo siguiente.
-* 1 Personaje Level 80 Por Cuenta
+* 4 Personaje Level 80 Por Cuenta
 * 4 Mochilas 
-* 2,500G De Oro
-* Armadura de Nivel 78
+* 14000G De Oro
+* Armadura de Nivel 80
 * Una Montura
-* Al Finalizar Teleporta El Jugador A Dalaran
+* Al Finalizar Teleporta El Jugador un lugar donde obtendra algunas cosas mas
 
 
 ## Cómo utilizar
