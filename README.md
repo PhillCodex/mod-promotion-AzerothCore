@@ -1,48 +1,53 @@
-# Promotion - Module template
+### ¿Que Configuraciones Tiene Este Modulo?
 
-[English](README.md) | [Español](README_ES.md)
+Permite Al Owner, Editar Si Permite La Promocion, La Armadura Que Quiera Sin Necesidad De Editarlo En El Codigo Fuente
 
-### What settings does this module have?
-
-Allows the owner to edit the armor they want without having to edit it in the source code
+* Te Permite Modificar El (Oro, Nivel, Cuantos Personaje Por Cuenta) Que Deseas Dar
+* Te Permite Habilitar O Desabilitar Lo Siguiente (Equipacion Automatica Mochilas, Teleport Automatico, El Oro Si Lo Deseas Habiltar) 
 
 -------------------------------------------------------
 
-# Promotion Module (AzerothCore)
+# Modulo De Promocion (AzerothCore)
 
-## Description
+## Descripción
 
-This module allows you to do this and this.
-This module allows the player to give you a promotion that consists of the following.
-* 1 Level 80 Character per account
-* 4 Backpacks 
-* 2,500G of gold
-* Level 78 armor
-* Mount 1
+Este módulo permite hacer esto y esto.
+Este Modulo Permite al jugador darle una promocion que consta de lo siguiente.
+* 4 Personaje Level 80 Por Cuenta
+* 4 Mochilas 
+* 14000G De Oro
+* Armadura de Nivel 80
+* Una Montura
+* Al Finalizar Teleporta El Jugador un lugar donde obtendra algunas cosas mas
 
 
-## Requirements
+## Cómo utilizar
 
-My module requires:
+trabajando en ello
+
+
+## Requisitos
+
+Mi módulo requiere:
 
 - AzerothCore 
 
 
-## Installation
+## Instalación
 
 ```
-1) Simply place the module into the AzerothCore `modules` directory (repository), not the compilation.
-2) Import the SQL manually to the correct database (auth, world or characters) or with the `db_assembler.sh` (if `include.sh` is provided).
-3) Run Cmake again and generate the necessary compilation. (Check the guide)
+1) Simplemente coloque el módulo dentro del directorio `modules` de AzerothCore (repositorio), no la compilación.
+2) Importe el SQL manualmente a la base de datos correcta (auth, mundo o caracteres) o con el `db_assembler.sh` (si se proporciona `include.sh`).
+3) Vuelva a ejecutar el Cmake y genere la compilación necesaria. (Revise la guía)
 ```
 
-## Edit module configuration (optional)
+## Editar la configuración del módulo (opcional)
 
-If you need to change the module configuration, go to your server configuration folder (where your `worldserver` or `worldserver.exe` is), copy `mod_promotion.conf.dist` and edit that new file.
+Si necesita cambiar la configuración del módulo, vaya a la carpeta de configuración de su servidor (donde está su `worldserver` o `worldserver.exe`), copie `mod_promotion.conf.dist` y edite ese nuevo archivo.
+
 
 ## Créditos
 
-* [Asmadeuxx](https://github.com/Asmadeuxx) (module author) Edit the link to point to your github if you wish.
+* [Yo]
 
 AzerothCore: [repository](https://github.com/azerothcore) - [website](http://azerothcore.org/) - [discord chat community](https://discord.gg/PaqQRkd)
-
