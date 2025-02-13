@@ -31,11 +31,11 @@ public:
     void OnLogin(Player* player) override {
         if (sConfigMgr->GetBoolDefault("announce_module.enableHelloWorld", true))
         {
-            ChatHandler(player->GetSession()).SendSysMessage("Hello World from Promotion-Module! - By Asmadeuxx");
+            ChatHandler(player->GetSession()).SendSysMessage("Hello World from Promotion-Module! - By WoW-Inmortal");
         }
         else
         {
-            ChatHandler(player->GetSession()).SendSysMessage("Hello World from Promotion-Module! - By Asmadeuxx");
+            ChatHandler(player->GetSession()).SendSysMessage("Hello World from Promotion-Module! - By WoW-Inmortal");
         }
     }
 };
