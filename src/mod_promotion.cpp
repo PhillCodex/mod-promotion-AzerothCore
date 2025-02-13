@@ -517,13 +517,13 @@ public:
         {
             case CLASS_HUNTER:
             case CLASS_SHAMAN:
-            player->learnSpell(SKILL_MAIL); // Aprende Malla
+            player->learnSpell(8737); // Aprende Malla
             break;
 
             case CLASS_PALADIN:
             case CLASS_WARRIOR:
             case CLASS_DEATH_KNIGHT:
-            player->learnSpell(SKILL_PLATE_MAIL); // Aprende Placas
+            player->learnSpell(750); // Aprende Placas
             break;
 
            default:
