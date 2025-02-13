@@ -1,6 +1,9 @@
-void Addnpc_promotion();
+#include "ScriptMgr.h"
+#include "mod_promotion.h"
 
-void Addmod_promotion_AzerothCore_Scripts() 
+void Addnpc_promotion(); // Asegúrate de que esta función está definida en mod_promotion.cpp
+
+void Addmod_promotion_AzerothCoreScripts()
 {
-     Addnpc_promotion();
-};
+    Addnpc_promotion();
+}
