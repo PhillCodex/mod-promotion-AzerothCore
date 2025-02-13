@@ -513,6 +513,13 @@ public:
         player->learnSpell(SKILL_RIDING_FLYING);
         player->learnSpell(SKILL_RIDING_ARTISING);
 
+        // Otorgar 10,000 puntos de reputación con la facción 1156
+        player->SetReputation(1156, 10000);
+
+        // Otorgar el logro 4598
+        player->CompletedAchievement(4598);
+        player->GetSession()->SendNotification("¡Has ganado 10,000 de reputación y el logro especial!");
+
         switch (player->getClass())
         {
             case CLASS_HUNTER:
