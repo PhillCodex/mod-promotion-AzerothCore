@@ -521,15 +521,13 @@ public:
 
         if (achievement)
         {
-        player->CompletedAchievement(achievement);
-        player->SendSystemMessage("¡Has ganado 10,000 de reputación y el logro especial!");
+            player->CompletedAchievement(achievement);
+            player->SendSystemMessage("¡Has ganado 10,000 de reputación y el logro especial!");
         }
         else
         {
-        player->GetSession()->SendSystemMessage("Error: No se pudo encontrar el logro.");
+            player->SendSystemMessage("Error: No se pudo encontrar el logro.");
         }
-
-
         switch (player->getClass())
         {
             case CLASS_HUNTER:
