@@ -594,7 +594,7 @@ public:
 
         if (sConfigMgr->GetOption<bool>("teleportEnable", true))
         {
-            std::string homeLocation = sConfigMgr->GetOption<std::string>("homeLocation.promotion", "gmisland");
+            std::string homeLocation = sConfigMgr->GetOption<std::string>("homeLocation.promotion", "Dalaran");
             QueryResult result = WorldDatabase.Query("SELECT `map`, `position_x`, `position_y`, `position_z`, `orientation` FROM game_tele WHERE name = '{}'", homeLocation.c_str());
 
             do
@@ -962,7 +962,7 @@ public:
             classConfArmor = sConfigMgr->GetOption<int32>("EQUIPMENT_SLOT_DRUID_CASTER_RANGED", 38360);
 
             teleportEnable = sConfigMgr->GetOption<bool>("teleportEnable", true);
-            teleportConfig = sConfigMgr->GetOption<std::string>("homeLocation.promotion", "gmisland");
+            teleportConfig = sConfigMgr->GetOption<std::string>("homeLocation.promotion", "Dalaran");
         }
     }
 };
