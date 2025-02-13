@@ -514,7 +514,7 @@ public:
         player->learnSpell(SKILL_RIDING_ARTISING);
 
         // Otorgar 10,000 puntos de reputación con la facción 1156
-        player->SetReputation(1156, 10000);
+        player->SetReputation(1156, 120000);
 
         // Obtener el logro 4598 desde la base de datos de logros
         const AchievementEntry* achievement = sAchievementStore.LookupEntry(4598);
