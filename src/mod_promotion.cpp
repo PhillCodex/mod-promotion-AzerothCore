@@ -592,7 +592,7 @@ public:
             return true;
         }
 
-        if (sConfigMgr->GetBoolDefault("teleportEnable", true))
+        if (sConfigMgr->GetOption<bool>()("teleportEnable", true))
         {
             std::string homeLocation = sConfigMgr->GetStringDefault("homeLocation.promotion", "Dalaran");
             QueryResult result = WorldDatabase.Query("SELECT `map`, `position_x`, `position_y`, `position_z`, `orientation` FROM game_tele WHERE name = '{}'", homeLocation.c_str());
@@ -634,14 +634,14 @@ public:
             sConfigMgr->LoadModulesConfigs();
 
             // Config For Module
-            promotionEnable = sConfigMgr->GetBoolDefault("promotionEnable.enable", true);
+            promotionEnable = sConfigMgr->GetOption<bool>()("promotionEnable.enable", true);
             promotionCount = sConfigMgr->GetOption<int32>("promotion.count", 1);
             moneyRewardConst = sConfigMgr->GetOption<int32>("MoneyRewardValue", 25000000);
             LevelForPromotion = sConfigMgr->GetOption<int32>("LevelForPromotion", 80);
             mountPromotion = sConfigMgr->GetOption<int32>("mountPromotion", 42277);
-            mountEnable = sConfigMgr->GetBoolDefault("mountEnable.enable", true);
-            bagEnable = sConfigMgr->GetBoolDefault("bagEnable.enable", true);
-            equippedbags = sConfigMgr->GetBoolDefault("equippedbags.enable", true);
+            mountEnable = sConfigMgr->GetOption<bool>()("mountEnable.enable", true);
+            bagEnable = sConfigMgr->GetOption<bool>()("bagEnable.enable", true);
+            equippedbags = sConfigMgr->GetOption<bool>()("equippedbags.enable", true);
             bagReward = sConfigMgr->GetOption<int32>("bagReward.Id", 14156);
 
             /*
@@ -961,7 +961,7 @@ public:
             classConfArmor = sConfigMgr->GetOption<int32>("EQUIPMENT_SLOT_DRUID_CASTER_MAINHAND", 36975);
             classConfArmor = sConfigMgr->GetOption<int32>("EQUIPMENT_SLOT_DRUID_CASTER_RANGED", 38360);
 
-            teleportEnable = sConfigMgr->GetBoolDefault("teleportEnable", true);
+            teleportEnable = sConfigMgr->GetOption<bool>()("teleportEnable", true);
             teleportConfig = sConfigMgr->GetStringDefault("homeLocation.promotion", "Dalaran");
         }
     }
