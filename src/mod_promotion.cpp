@@ -513,6 +513,24 @@ public:
         player->learnSpell(SKILL_RIDING_FLYING);
         player->learnSpell(SKILL_RIDING_ARTISING);
 
+        switch (player->getClass())
+        {
+            case CLASS_HUNTER:
+            case CLASS_SHAMAN:
+            player->learnSpell(SKILL_MAIL); // Aprende Malla
+            break;
+
+            case CLASS_PALADIN:
+            case CLASS_WARRIOR:
+            case CLASS_DEATH_KNIGHT:
+            player->learnSpell(SKILL_PLATE_MAIL); // Aprende Placas
+            break;
+
+           default:
+           // No hacer nada para otras clases
+           break;
+        }
+
         //creature->MonsterWhisper("You Got Your Promotion!", player);
 
         if (mountEnable)
