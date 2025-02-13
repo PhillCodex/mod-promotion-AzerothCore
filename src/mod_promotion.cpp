@@ -522,7 +522,7 @@ public:
         if (achievement)
         {
         player->CompletedAchievement(achievement);
-        player->SendSysMessage("¡Has ganado 10,000 de reputación y el logro especial!");
+        player->SendSystemMessage("¡Has ganado 10,000 de reputación y el logro especial!");
         }
         else
         {
