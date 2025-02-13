@@ -29,7 +29,7 @@ public:
     announce_module() : PlayerScript("announce_module") { }
 
     void OnLogin(Player* player) override {
-        if (sConfigMgr->GetBoolDefault("announce_module.enableHelloWorld", true))
+        if (sConfigMgr->GetOption<bool>("announce_module.enableHelloWorld", true))
         {
             ChatHandler(player->GetSession()).SendSysMessage("Hello World from Promotion-Module! - By WoW-Inmortal");
         }
