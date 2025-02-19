@@ -28,7 +28,7 @@ class announce_module : public PlayerScript{
 public:
     announce_module() : PlayerScript("announce_module") { }
 
-    void OnLogin(Player* player) override {
+    void OnLogin(Player* player){
         if (sConfigMgr->GetOption<bool>("announce_module.enableHelloWorld", true))
         {
             ChatHandler(player->GetSession()).SendSysMessage("Hello World from Promotion-Module! - By WoW-Inmortal");
